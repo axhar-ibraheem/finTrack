@@ -1,0 +1,184 @@
+@import "tailwindcss";
+@variant dark (&:where(.dark, .dark *));
+
+/* Removes focus outline from all Recharts elements. */
+.recharts-wrapper *:focus,
+.recharts-wrapper *:focus-visible,
+.recharts-sector:focus,
+.recharts-sector:focus-visible,
+.recharts-layer:focus,
+.recharts-layer:focus-visible {
+  outline: none !important;
+}
+
+/* CSS Variables */
+:root {
+  /* Scrollbar */
+  --scrollbar-width: 6px;
+  --scrollbar-track: theme(colors.slate.100);
+  --scrollbar-thumb: theme(colors.slate.300);
+  --scrollbar-thumb-hover: theme(colors.slate.400);
+
+  /* DatePicker */
+  --dp-bg: theme(colors.white);
+  --dp-border: theme(colors.gray.200);
+  --dp-header-bg: theme(colors.white);
+  --dp-header-border: theme(colors.gray.100);
+  --dp-month-color: theme(colors.gray.900);
+  --dp-day-name-color: theme(colors.gray.400);
+  --dp-day-color: theme(colors.gray.700);
+  --dp-day-hover-bg: theme(colors.blue.50);
+  --dp-day-hover-color: theme(colors.blue.600);
+  --dp-selected-bg: theme(colors.blue.600);
+  --dp-selected-hover: theme(colors.blue.700);
+  --dp-today-color: theme(colors.blue.600);
+  --dp-outside-color: theme(colors.gray.300);
+  --dp-disabled-color: theme(colors.gray.300);
+  --dp-keyboard-color: theme(colors.gray.700);
+  --dp-keyboard-hover-bg: theme(colors.blue.50);
+  --dp-keyboard-hover-color: theme(colors.blue.600);
+}
+
+.dark {
+  /* Scrollbar */
+  --scrollbar-track: theme(colors.slate.800);
+  --scrollbar-thumb: theme(colors.slate.600);
+  --scrollbar-thumb-hover: theme(colors.slate.500);
+
+  /* DatePicker */
+  --dp-bg: theme(colors.gray.900);
+  --dp-border: theme(colors.gray.700);
+  --dp-header-bg: theme(colors.gray.900);
+  --dp-header-border: theme(colors.gray.800);
+  --dp-month-color: theme(colors.white);
+  --dp-day-name-color: theme(colors.gray.500);
+  --dp-day-color: theme(colors.gray.300);
+  --dp-day-hover-bg: theme(colors.blue.900);
+  --dp-day-hover-color: theme(colors.blue.300);
+  --dp-selected-bg: theme(colors.blue.600);
+  --dp-selected-hover: theme(colors.blue.700);
+  --dp-today-color: theme(colors.blue.400);
+  --dp-outside-color: theme(colors.gray.600);
+  --dp-disabled-color: theme(colors.gray.600);
+  --dp-keyboard-color: theme(colors.gray.300);
+  --dp-keyboard-hover-bg: theme(colors.blue.900);
+  --dp-keyboard-hover-color: theme(colors.blue.300);
+}
+
+::-webkit-scrollbar {
+  width: var(--scrollbar-width);
+  height: var(--scrollbar-width);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 999px;
+  transition: background 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+::-webkit-scrollbar-corner {
+  background: transparent;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
+
+/* React DatePicker overrides. */
+.react-datepicker-popper {
+  z-index: 99999 !important;
+}
+
+.react-datepicker {
+  font-family: var(--font-sans) !important;
+  border-radius: 0.75rem !important;
+  border: 0.5px solid var(--dp-border) !important;
+  background-color: var(--dp-bg) !important;
+  overflow: hidden !important;
+  padding: 0.5rem !important;
+}
+
+.react-datepicker__header {
+  background-color: var(--dp-header-bg) !important;
+  border-bottom: 0.5px solid var(--dp-header-border) !important;
+  border-radius: 0 !important;
+  padding: 0.5rem 0 0.75rem !important;
+}
+
+.react-datepicker__current-month {
+  font-size: 0.8125rem !important;
+  font-weight: 500 !important;
+  color: var(--dp-month-color) !important;
+}
+
+.react-datepicker__day-name {
+  font-size: 0.6875rem !important;
+  color: var(--dp-day-name-color) !important;
+  width: 2rem !important;
+}
+
+.react-datepicker__day {
+  font-size: 0.8125rem !important;
+  color: var(--dp-day-color) !important;
+  width: 2rem !important;
+  line-height: 2rem !important;
+  border-radius: 0.5rem !important;
+}
+
+.react-datepicker__day:hover {
+  background-color: var(--dp-day-hover-bg) !important;
+  color: var(--dp-day-hover-color) !important;
+}
+
+.react-datepicker__day--selected {
+  background-color: var(--dp-selected-bg) !important;
+  color: white !important;
+  font-weight: 500 !important;
+}
+
+.react-datepicker__day--selected:hover {
+  background-color: var(--dp-selected-hover) !important;
+  color: white !important;
+}
+
+.react-datepicker__day--today {
+  font-weight: 600 !important;
+  color: var(--dp-today-color) !important;
+}
+
+.react-datepicker__day--today.react-datepicker__day--selected {
+  color: white !important;
+}
+
+.react-datepicker__day--outside-month {
+  color: var(--dp-outside-color) !important;
+}
+
+.react-datepicker__day--disabled {
+  color: var(--dp-disabled-color) !important;
+  cursor: not-allowed !important;
+}
+
+.react-datepicker__day--keyboard-selected {
+  background-color: transparent !important;
+  color: var(--dp-keyboard-color) !important;
+}
+
+.react-datepicker__day--keyboard-selected:hover {
+  background-color: var(--dp-keyboard-hover-bg) !important;
+  color: var(--dp-keyboard-hover-color) !important;
+}
+
+.react-datepicker__navigation {
+  top: 0.6rem !important;
+}
