@@ -19,12 +19,9 @@ import { type Transaction } from "@fintrack/types";
 import { TransactionUtils } from "./_utils/transactions.utils";
 
 export const TransactionsPage = () => {
-  const role = useAppSelector((state) => state.ui.role);
   const allTxns = useAppSelector((state) => state.transactions.items);
   const filtered = useFilteredTransactions();
   const { isLoading } = useTransactionStatus();
-
-  const isAdmin = role === "admin";
 
   const summary = useMemo(
     () => TransactionUtils.getFilteredSummary(filtered, allTxns),
@@ -61,16 +58,15 @@ export const TransactionsPage = () => {
             {allTxns.length} total transactions
           </p>
         </div>
-        {isAdmin && (
-          <Button
-            variant="primary"
-            onClick={handleAddTransaction}
-            icon={<Plus size={15}></Plus>}
-            className="rounded-sm"
-          >
-            Add transaction
-          </Button>
-        )}
+
+        <Button
+          variant="primary"
+          onClick={handleAddTransaction}
+          icon={<Plus size={15}></Plus>}
+          className="rounded-sm"
+        >
+          Add transaction
+        </Button>
       </div>
 
       {isLoading ? (

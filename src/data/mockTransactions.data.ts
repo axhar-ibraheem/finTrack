@@ -8,7 +8,6 @@ export const mockTransactions: Transaction[] = [
     type: "income",
     category: "Salary",
     date: "2026-01-01",
-    createdBy: "admin",
   },
   {
     id: "txn_002",
@@ -17,7 +16,6 @@ export const mockTransactions: Transaction[] = [
     type: "expense",
     category: "Rent",
     date: "2026-01-02",
-    createdBy: "admin",
   },
   {
     id: "txn_003",
@@ -26,7 +24,6 @@ export const mockTransactions: Transaction[] = [
     type: "expense",
     category: "Food",
     date: "2026-01-05",
-    createdBy: "admin",
   },
   {
     id: "txn_004",
@@ -35,7 +32,6 @@ export const mockTransactions: Transaction[] = [
     type: "expense",
     category: "Utilities",
     date: "2026-01-07",
-    createdBy: "admin",
   },
   {
     id: "txn_005",
@@ -44,7 +40,6 @@ export const mockTransactions: Transaction[] = [
     type: "expense",
     category: "Entertainment",
     date: "2026-01-08",
-    createdBy: "admin",
   },
   {
     id: "txn_006",
@@ -53,7 +48,6 @@ export const mockTransactions: Transaction[] = [
     type: "income",
     category: "Freelance",
     date: "2026-01-10",
-    createdBy: "admin",
   },
   {
     id: "txn_007",
@@ -62,7 +56,6 @@ export const mockTransactions: Transaction[] = [
     type: "expense",
     category: "Healthcare",
     date: "2026-01-12",
-    createdBy: "admin",
   },
   {
     id: "txn_008",
@@ -71,7 +64,6 @@ export const mockTransactions: Transaction[] = [
     type: "expense",
     category: "Food",
     date: "2026-01-14",
-    createdBy: "admin",
   },
   {
     id: "txn_009",
@@ -80,7 +72,6 @@ export const mockTransactions: Transaction[] = [
     type: "expense",
     category: "Shopping",
     date: "2026-01-16",
-    createdBy: "admin",
   },
   {
     id: "txn_010",
@@ -89,7 +80,6 @@ export const mockTransactions: Transaction[] = [
     type: "expense",
     category: "Travel",
     date: "2026-01-18",
-    createdBy: "admin",
   },
   {
     id: "txn_011",
@@ -98,7 +88,6 @@ export const mockTransactions: Transaction[] = [
     type: "expense",
     category: "Entertainment",
     date: "2026-01-20",
-    createdBy: "admin",
   },
   {
     id: "txn_012",
@@ -107,7 +96,6 @@ export const mockTransactions: Transaction[] = [
     type: "expense",
     category: "Utilities",
     date: "2026-01-22",
-    createdBy: "admin",
   },
   {
     id: "txn_013",
@@ -116,7 +104,6 @@ export const mockTransactions: Transaction[] = [
     type: "expense",
     category: "Healthcare",
     date: "2026-01-25",
-    createdBy: "admin",
   },
   {
     id: "txn_014",
@@ -125,7 +112,6 @@ export const mockTransactions: Transaction[] = [
     type: "expense",
     category: "Food",
     date: "2026-01-28",
-    createdBy: "admin",
   },
 
   {
@@ -135,7 +121,6 @@ export const mockTransactions: Transaction[] = [
     type: "income",
     category: "Salary",
     date: "2026-02-01",
-    createdBy: "admin",
   },
   {
     id: "txn_016",
@@ -144,7 +129,6 @@ export const mockTransactions: Transaction[] = [
     type: "expense",
     category: "Rent",
     date: "2026-02-02",
-    createdBy: "admin",
   },
   {
     id: "txn_017",
@@ -153,7 +137,6 @@ export const mockTransactions: Transaction[] = [
     type: "expense",
     category: "Food",
     date: "2026-02-04",
-    createdBy: "admin",
   },
   {
     id: "txn_018",
@@ -162,7 +145,6 @@ export const mockTransactions: Transaction[] = [
     type: "expense",
     category: "Utilities",
     date: "2026-02-06",
-    createdBy: "admin",
   },
   {
     id: "txn_019",
@@ -171,7 +153,6 @@ export const mockTransactions: Transaction[] = [
     type: "expense",
     category: "Entertainment",
     date: "2026-02-08",
-    createdBy: "admin",
   },
   {
     id: "txn_020",
@@ -180,7 +161,6 @@ export const mockTransactions: Transaction[] = [
     type: "income",
     category: "Freelance",
     date: "2026-02-10",
-    createdBy: "admin",
   },
   {
     id: "txn_021",
@@ -189,7 +169,6 @@ export const mockTransactions: Transaction[] = [
     type: "expense",
     category: "Travel",
     date: "2026-02-12",
-    createdBy: "admin",
   },
   {
     id: "txn_022",
@@ -198,7 +177,6 @@ export const mockTransactions: Transaction[] = [
     type: "expense",
     category: "Shopping",
     date: "2026-02-14",
-    createdBy: "admin",
   },
   {
     id: "txn_023",
@@ -207,7 +185,6 @@ export const mockTransactions: Transaction[] = [
     type: "expense",
     category: "Food",
     date: "2026-02-16",
-    createdBy: "admin",
   },
   {
     id: "txn_024",
@@ -216,7 +193,6 @@ export const mockTransactions: Transaction[] = [
     type: "expense",
     category: "Healthcare",
     date: "2026-02-18",
-    createdBy: "admin",
   },
   {
     id: "txn_025",
@@ -225,7 +201,6 @@ export const mockTransactions: Transaction[] = [
     type: "expense",
     category: "Entertainment",
     date: "2026-02-20",
-    createdBy: "admin",
   },
   {
     id: "txn_026",
@@ -234,7 +209,6 @@ export const mockTransactions: Transaction[] = [
     type: "expense",
     category: "Food",
     date: "2026-02-22",
-    createdBy: "admin",
   },
   {
     id: "txn_027",
@@ -243,7 +217,6 @@ export const mockTransactions: Transaction[] = [
     type: "expense",
     category: "Shopping",
     date: "2026-02-24",
-    createdBy: "admin",
   },
   {
     id: "txn_028",
@@ -252,7 +225,6 @@ export const mockTransactions: Transaction[] = [
     type: "expense",
     category: "Utilities",
     date: "2026-02-26",
-    createdBy: "admin",
   },
 
   {
@@ -262,7 +234,6 @@ export const mockTransactions: Transaction[] = [
     type: "income",
     category: "Salary",
     date: "2026-03-01",
-    createdBy: "admin",
   },
   {
     id: "txn_030",
@@ -271,7 +242,6 @@ export const mockTransactions: Transaction[] = [
     type: "expense",
     category: "Rent",
     date: "2026-03-02",
-    createdBy: "admin",
   },
   {
     id: "txn_031",
@@ -280,7 +250,6 @@ export const mockTransactions: Transaction[] = [
     type: "expense",
     category: "Food",
     date: "2026-03-04",
-    createdBy: "admin",
   },
   {
     id: "txn_032",
@@ -289,7 +258,6 @@ export const mockTransactions: Transaction[] = [
     type: "income",
     category: "Freelance",
     date: "2026-03-06",
-    createdBy: "admin",
   },
   {
     id: "txn_033",
@@ -298,7 +266,6 @@ export const mockTransactions: Transaction[] = [
     type: "expense",
     category: "Utilities",
     date: "2026-03-08",
-    createdBy: "admin",
   },
   {
     id: "txn_034",
@@ -307,7 +274,6 @@ export const mockTransactions: Transaction[] = [
     type: "expense",
     category: "Travel",
     date: "2026-03-10",
-    createdBy: "admin",
   },
   {
     id: "txn_035",
@@ -316,7 +282,6 @@ export const mockTransactions: Transaction[] = [
     type: "expense",
     category: "Entertainment",
     date: "2026-03-12",
-    createdBy: "admin",
   },
   {
     id: "txn_036",
@@ -325,7 +290,6 @@ export const mockTransactions: Transaction[] = [
     type: "expense",
     category: "Food",
     date: "2026-03-14",
-    createdBy: "admin",
   },
   {
     id: "txn_037",
@@ -334,7 +298,6 @@ export const mockTransactions: Transaction[] = [
     type: "expense",
     category: "Healthcare",
     date: "2026-03-16",
-    createdBy: "admin",
   },
   {
     id: "txn_038",
@@ -343,7 +306,6 @@ export const mockTransactions: Transaction[] = [
     type: "expense",
     category: "Shopping",
     date: "2026-03-18",
-    createdBy: "admin",
   },
   {
     id: "txn_039",
@@ -352,7 +314,6 @@ export const mockTransactions: Transaction[] = [
     type: "expense",
     category: "Travel",
     date: "2026-03-22",
-    createdBy: "admin",
   },
   {
     id: "txn_040",
@@ -361,6 +322,5 @@ export const mockTransactions: Transaction[] = [
     type: "expense",
     category: "Food",
     date: "2026-03-28",
-    createdBy: "admin",
   },
 ];
