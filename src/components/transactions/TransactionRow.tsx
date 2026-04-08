@@ -1,5 +1,4 @@
 import { Pencil, Trash2 } from "lucide-react";
-import { useAppSelector } from "@fintrack/hooks";
 import { CategoryBadge, TypeBadge, Button } from "@fintrack/components";
 import { cn, FormatUtils } from "@fintrack/utils";
 import type { Transaction } from "@fintrack/types";
@@ -17,9 +16,6 @@ export const TransactionRow = ({
   onDelete,
   hideActions = false,
 }: TransactionRowProps) => {
-  const role = useAppSelector((state) => state.ui.role);
-  const isAdmin = role === "admin";
-
   return (
     <tr className="border-b border-gray-50 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors">
       <td className="px-4 py-3.5 text-xs text-gray-500 dark:text-gray-400 whitespace-nowrap">
@@ -54,7 +50,7 @@ export const TransactionRow = ({
       </td>
 
       <td className="px-4 py-3.5">
-        {isAdmin && !hideActions && (
+        {!hideActions && (
           <div className="flex items-center gap-2">
             <Button
               variant="ghost"

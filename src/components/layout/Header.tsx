@@ -1,21 +1,14 @@
 import { Menu } from "lucide-react";
-import { useAppDispatch, useAppSelector } from "@fintrack/hooks";
-import { setRole, toggleMobileSidebar } from "@fintrack/store";
-import type { Role } from "@fintrack/types";
-import { type SelectOption, SelectField, ThemeToggle, Button } from "../ui";
+import { useAppDispatch } from "@fintrack/hooks";
+import { toggleMobileSidebar } from "@fintrack/store";
+import { ThemeToggle, Button } from "@fintrack/components";
 
 interface HeaderProps {
   title: string;
 }
 
-const roleOptions: SelectOption<Role>[] = [
-  { label: "Admin", value: "admin" },
-  { label: "Viewer", value: "viewer" },
-];
-
 export const Header = ({ title }: HeaderProps) => {
   const dispatch = useAppDispatch();
-  const { role } = useAppSelector((state) => state.ui);
 
   return (
     <header className="h-18 px-6 flex items-center justify-between bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800 shrink-0">
@@ -32,14 +25,6 @@ export const Header = ({ title }: HeaderProps) => {
         </h1>
       </div>
       <div className="flex items-center gap-3">
-        <div className="flex items-center gap-2">
-          <span className="text-xs text-gray-500 dark:text-gray-400">Role</span>
-          <SelectField
-            value={role}
-            onChange={(value) => dispatch(setRole(value as Role))}
-            options={roleOptions}
-          ></SelectField>
-        </div>
         <ThemeToggle></ThemeToggle>
       </div>
     </header>
