@@ -1,10 +1,29 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
+import checker from "vite-plugin-checker";
+import eslint from "vite-plugin-eslint2";
 import path from "path";
 
 export default defineConfig({
-  plugins: [react(), tailwindcss()],
+  plugins: [
+    react(),
+    tailwindcss(),
+    eslint({
+      emitError: true,
+      emitWarning: true,
+      fix: true,
+    }),
+    checker({
+      typescript: {
+        tsconfigPath: "./tsconfig.app.json",
+      },
+      overlay: {
+        initialIsOpen: false,
+        position: "tl",
+      },
+    }),
+  ],
   resolve: {
     alias: {
       "@fintrack/components": path.resolve(__dirname, "src/components"),

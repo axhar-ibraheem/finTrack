@@ -3,7 +3,6 @@ import { TransactionRow } from "./TransactionRow";
 import { EmptyMessage, ConfirmDialog } from "@fintrack/components";
 import {
   useAppDispatch,
-  useAppSelector,
   useFilteredTransactions,
   useTransactionStatus,
 } from "@fintrack/hooks";
@@ -30,7 +29,6 @@ export const TransactionTable = ({
   transactions: propTransactions,
 }: TransactionTableProps) => {
   const dispatch = useAppDispatch();
-  const role = useAppSelector((state) => state.ui.role);
   const filteredTransactions = useFilteredTransactions();
   const transactions = propTransactions ?? filteredTransactions;
   const { mutations } = useTransactionStatus();
@@ -88,7 +86,7 @@ export const TransactionTable = ({
                 </th>
               ))}
 
-              {role === "admin" && !hideActions && (
+              {!hideActions && (
                 <th className={`${tableHeaderClasses} ${"px-8"}`}>Actions</th>
               )}
             </tr>
