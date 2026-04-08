@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import {
   useAppDispatch,
-  useAppSelector,
   useTransactionStatus,
   useInput,
 } from "@fintrack/hooks";
@@ -38,10 +37,7 @@ export const useTransactionModal = ({
   onClose,
 }: UseTransactionModalProps): UseTransactionModalResult => {
   const dispatch = useAppDispatch();
-  const role = useAppSelector((state) => state.ui.role);
   const isEditing = editingTransaction !== null;
-  const isAdmin = role === "admin";
-
   const { mutations } = useTransactionStatus();
   const isMutating = mutations.add.loading || mutations.update.loading;
 
@@ -92,7 +88,7 @@ export const useTransactionModal = ({
   };
 
   const handleSubmit = async () => {
-    if (!validate() || !isAdmin) return;
+    if (!validate()) return;
 
     const transaction = TransactionUtils.buildTransaction(
       {
@@ -102,7 +98,6 @@ export const useTransactionModal = ({
         type: typeForm.type,
         category: typeForm.category,
       },
-      role,
       editingTransaction,
     );
 

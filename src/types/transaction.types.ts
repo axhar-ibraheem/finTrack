@@ -1,5 +1,3 @@
-import type { Role } from "./role.types";
-
 export type TransactionType = "income" | "expense";
 
 export type Category =
@@ -20,5 +18,4 @@ export interface Transaction {
   type: TransactionType;
   category: Category;
   date: string;
-  createdBy: Role;
 }

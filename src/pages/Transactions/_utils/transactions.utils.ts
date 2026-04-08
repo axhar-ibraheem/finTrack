@@ -1,9 +1,4 @@
-import type {
-  Transaction,
-  Category,
-  TransactionType,
-  Role,
-} from "@fintrack/types";
+import type { Transaction, Category, TransactionType } from "@fintrack/types";
 import { CalculationUtils } from "@fintrack/utils";
 import { v4 as uuidv4 } from "uuid";
 import { format, parseISO } from "date-fns";
@@ -79,7 +74,6 @@ export class TransactionUtils {
 
   static buildTransaction(
     values: TransactionFormValues,
-    role: Role,
     editingTransaction: Transaction | null,
   ): Transaction {
     return {
@@ -89,7 +83,6 @@ export class TransactionUtils {
       type: values.type,
       category: values.category,
       date: values.date,
-      createdBy: role,
     };
   }
 
