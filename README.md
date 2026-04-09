@@ -11,6 +11,17 @@ A feature-rich personal finance dashboard built with React, TypeScript, and Redu
 
 ---
 
+## 🐳 Run with Docker
+
+Make sure Docker is installed on your system.
+
+Build the Docker image
+`docker build -t fintrack-dashboard .`
+Run the container
+`docker run -p 3000:80 fintrack-dashboard`
+Open in browser
+http://localhost:3000
+
 ## Features
 
 ### Core Features
@@ -43,11 +54,6 @@ A feature-rich personal finance dashboard built with React, TypeScript, and Redu
 - Most active month analysis.
 - Savings health observation with personalized advice.
 - Period filter: 1M, 3M, 6M, All, filters all insight data dynamically.
-
-**Role Based UI**
-
-- Admin role - full access to add, edit, and delete transactions.
-- Viewer role - read only access, all action buttons hidden from DOM.
 
 ### UX Features
 
