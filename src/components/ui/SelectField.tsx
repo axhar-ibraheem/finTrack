@@ -59,7 +59,7 @@ export const SelectField = <VALUE_TYPE extends string = string>({
         disabled={disabled}
         onClick={() => setOpen((open) => !open)}
         className={cn(
-          "inline-flex items-center gap-2 text-xs font-medium",
+          "inline-flex items-center justify-between gap-2 text-xs font-medium",
           "pl-3 pr-2.5 py-2 rounded-sm w-full",
           "border border-gray-200 dark:border-gray-600",
           "bg-white dark:bg-gray-800/60",
