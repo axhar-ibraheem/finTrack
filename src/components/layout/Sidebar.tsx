@@ -1,5 +1,5 @@
 import { NavLink, useLocation } from "react-router-dom";
-import { ChevronLeft, ChevronRight, X } from "lucide-react";
+import { PanelLeft, PanelLeftClose, X } from "lucide-react";
 import { cn } from "@fintrack/utils";
 import { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "@fintrack/hooks";
@@ -90,12 +90,12 @@ export const Sidebar = () => {
         onClick={() => dispatch(toggleSidebar())}
         icon={
           sidebarCollapsed ? (
-            <ChevronRight size={12}></ChevronRight>
+            <PanelLeftClose size={12}></PanelLeftClose>
           ) : (
-            <ChevronLeft size={12}></ChevronLeft>
+            <PanelLeft size={12}></PanelLeft>
           )
         }
-        className="hidden md:flex absolute -right-3 top-6 p-1.5"
+        className="hidden md:flex absolute -right-3 top-1/2 p-1.5"
       ></Button>
     </div>
   );
